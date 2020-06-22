@@ -6,6 +6,7 @@ level operating system functionality.
 """
 
 import sys
+import getpass
 # See docs for the sys module: https://docs.python.org/3.7/library/sys.html
 
 # Print out the command line arguments in sys.argv, one per line:
@@ -23,9 +24,14 @@ import os
 
 # Print the current process ID
 # YOUR CODE HERE
+process_id = os.getpid()
+print(process_id)
 
 # Print the current working directory (cwd):
 # YOUR CODE HERE
+current_working_directory = os.getcwd()
+print(current_working_directory)
 
 # Print out your machine's login name
 # YOUR CODE HERE
+
