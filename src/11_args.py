@@ -76,10 +76,11 @@ f4(a=12, b=30)
 # key: founded, value: "March 23, 1868"
 # f4(city="Berkeley", population=121240, founded="March 23, 1868")
 #
-# d = {
-#     "monster": "goblin",
-#     "hp": 3
-# }
+d = {
+    "monster": "goblin",
+    "hp": 3
+}
 
 # How do you have to modify the f4 call below to make this work?
-# f4(d)
+# adding the double asterisks breaks down dictionaries into their key value pairs as kwargs
+f4(**d)
