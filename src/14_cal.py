@@ -30,3 +30,30 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+#the sys module can access the arguments passed into the cmd prompt
+# slice it because the first argv is always the file itself
+month_and_year = sys.argv[1:]
+
+calendar_to_print = calendar.TextCalendar()
+
+# print(month_and_year)
+#check the length of the args list
+if len(month_and_year) > 1:
+    # if more than 1 then assign the first index as the month and the last as the year
+    month = int(month_and_year[0])
+    year = int(month_and_year[1])
+    # and then print out the calendar using your month and year
+    calendar_to_print.prmonth(year, month)
+# otherwise
+else:
+    # grab today's month and year for calendar
+    modern_month_and_year = datetime.today().strftime('%m-%y').split("-")
+    #and then assign those variables to it
+    month = int(modern_month_and_year[0])
+    year = int(modern_month_and_year[1])
+    # and then print out the calendar using your month and year
+    calendar_to_print.prmonth(year, month)
+
+
+
